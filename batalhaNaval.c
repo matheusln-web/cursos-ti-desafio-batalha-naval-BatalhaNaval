@@ -12,11 +12,17 @@ int main() {
             tabuleiro [i][j] = 0;
         } 
     }
-    for(int i = 3; i < 6; i++){
+    for (int i = 3; i < 6; i++){
         tabuleiro [3][i] = 3;//Nessa parte eu defino o primeiro navio na posição D3 até F3
         for(int j = 5; j < 8; j++){
             tabuleiro [j][7] = 3;//Nessa parte eu defino o segundo navio na posição H5 até H7
         }
+    }
+    for (int i = 7, j = 1; i < 10 && j < 4; i++, j++){//Nessa parte defini o terceiro navio de B7 até D9
+        tabuleiro[i][j] = 3;
+    }
+    for (int i = 0, j = 8; i < 3 && j > 5; i++, j--){
+        tabuleiro[i][j] = 3;
     }
 //Mostrando o tabuleiro
     for (int c = 0; c < 10; c++){//Essa parte mostra as letras em cima na coluna, não consegui deixar melhor alinhado que isso.
@@ -34,10 +40,7 @@ int main() {
     } 
     return 0;
 }
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+   
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
